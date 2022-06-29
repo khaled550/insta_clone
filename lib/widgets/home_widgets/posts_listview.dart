@@ -11,7 +11,7 @@ class PostsListiew extends StatelessWidget {
     return ListView.builder(
       itemCount: 20,
       itemBuilder: ((context, index) => SizedBox(
-            height: Utils.getDeviceHieght(context) * .55,
+            height: Utils.getDeviceHieght(context) * .75,
             child: const PostsListItem(),
           )),
     );

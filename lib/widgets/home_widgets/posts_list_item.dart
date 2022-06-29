@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:insta_clone/widgets/common_widgets/author_comment.dart';
+import 'package:insta_clone/widgets/common_widgets/small_text.dart';
 import 'package:insta_clone/widgets/home_widgets/post_author_head.dart';
 import 'package:insta_clone/widgets/home_widgets/post_tail.dart';
 
@@ -18,20 +20,31 @@ class PostsListItem extends StatelessWidget {
                   thickness: 1.5,
                 ), */
                 SizedBox(
-                  height: constraints.maxHeight * 0.73,
+                  height: constraints.maxHeight * 0.75,
                   width: double.infinity,
                   child: const ColoredBox(
                     color: Colors.teal,
                   ),
                 ),
                 const PostTail(),
-                const Padding(
+                Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
-                  child: Text(
-                    '1,557 likes',
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SmallText(
+                        //likes count
+                        text: '2,812 likes',
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      AuthorComment(),
+                    ],
                   ),
-                ),
+                )
               ],
             )),
       ),
