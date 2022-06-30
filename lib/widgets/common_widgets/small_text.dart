@@ -12,7 +12,7 @@ class SmallText extends StatelessWidget {
   final TextDecoration textDecoration;
   const SmallText(
       {Key? key,
-      this.color = Colors.white,
+      this.color = Colors.black,
       required this.text,
       this.size = 16,
       this.height = 1.2,

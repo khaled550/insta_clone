@@ -11,7 +11,7 @@ class PostAuthorHead extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
       return SizedBox(
-        child: Container(
+        child: Padding(
           padding: const EdgeInsets.all(8.0),
           //color: Colors.red,
           child: Row(

@@ -9,16 +9,17 @@ class PostsListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return ColoredBox(
+      color: Colors.white,
       child: LayoutBuilder(
         builder: ((context, constraints) => Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const PostAuthorHead(),
                 /* Divider(
-                  height: 2,
-                  thickness: 1.5,
-                ), */
+              height: 2,
+              thickness: 1.5,
+            ), */
                 SizedBox(
                   height: constraints.maxHeight * 0.75,
                   width: double.infinity,
@@ -26,25 +27,12 @@ class PostsListItem extends StatelessWidget {
                     color: Colors.teal,
                   ),
                 ),
-                const PostTail(),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SmallText(
-                        //likes count
-                        text: '2,812 likes',
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      AuthorComment(),
-                    ],
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsetsDirectional.fromSTEB(12, 0, 12, 0),
+                    child: const PostTail(),
                   ),
-                )
+                ),
               ],
             )),
       ),

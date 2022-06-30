@@ -8,8 +8,13 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     AppBar homeAppBar = AppBar(
-      title: const Text('Instagram'),
-      backgroundColor: Colors.black,
+      elevation: 0.5,
+      title: const Text(
+        'Instagram',
+        style: TextStyle(color: Colors.black),
+      ),
+      backgroundColor: Colors.white,
+      //titleTextStyle: TextStyle(color: Colors.black),
       actions: [
         const SizedBox(
           width: 5,
@@ -19,6 +24,7 @@ class MyHomePage extends StatelessWidget {
           icon: const Icon(
             Icons.add_outlined,
             size: 36,
+            color: Colors.black,
           ),
         ),
         const SizedBox(
@@ -29,6 +35,7 @@ class MyHomePage extends StatelessWidget {
           icon: const Icon(
             Icons.favorite,
             size: 32,
+            color: Colors.black,
           ),
         ),
         const SizedBox(
@@ -39,6 +46,7 @@ class MyHomePage extends StatelessWidget {
           icon: const Icon(
             Icons.message,
             size: 32,
+            color: Colors.black,
           ),
         ),
       ],
