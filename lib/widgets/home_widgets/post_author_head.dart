@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:insta_clone/contants/utils.dart';
+import 'package:insta_clone/pages/profile_page.dart';
 import 'package:insta_clone/widgets/common_widgets/user_avatar.dart';
 
 import '../common_widgets/small_text.dart';
@@ -10,7 +12,11 @@ class PostAuthorHead extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
-      return SizedBox(
+      return GestureDetector(
+        onTap: (() => Utils.navigateTo(
+              context: context,
+              pagePath: ProfilePage.route,
+            )),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           //color: Colors.red,

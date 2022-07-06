@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:insta_clone/app_router.dart';
 
 import 'pages/home_page.dart';
 
@@ -23,8 +24,9 @@ class MyApp extends StatelessWidget {
         },
       ),
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      home: MyHomePage(),
+      title: 'Insta Clone',
+      //home: MyHomePage(),
+      onGenerateRoute: AppRouter().generateRoute,
     );
   }
 }
