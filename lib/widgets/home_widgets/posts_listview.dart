@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:insta_clone/contants/utils.dart';
 import 'package:insta_clone/widgets/home_widgets/posts_list_item.dart';
 
@@ -11,7 +10,7 @@ class PostsListiew extends StatelessWidget {
     return ListView.builder(
       itemCount: 20,
       itemBuilder: ((context, index) => SizedBox(
-            height: Utils.getDeviceHieght(context) * .9,
+            height: Utils.getDeviceHieght(context) * .75,
             child: const PostsListItem(),
           )),
     );

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:insta_clone/widgets/common_widgets/author_comment.dart';
-import 'package:insta_clone/widgets/common_widgets/small_text.dart';
 import 'package:insta_clone/widgets/home_widgets/post_author_head.dart';
 import 'package:insta_clone/widgets/home_widgets/post_tail.dart';
 
@@ -15,22 +13,22 @@ class PostsListItem extends StatelessWidget {
         builder: ((context, constraints) => Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const PostAuthorHead(),
-                /* Divider(
-              height: 2,
-              thickness: 1.5,
-            ), */
                 SizedBox(
-                  height: constraints.maxHeight * 0.75,
+                  height: constraints.maxHeight * .1,
+                  child: const PostAuthorHead(),
+                ),
+                SizedBox(
+                  height: constraints.maxHeight * .6,
                   width: double.infinity,
                   child: const ColoredBox(
                     color: Colors.teal,
                   ),
                 ),
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(12, 0, 12, 0),
-                    child: const PostTail(),
+                SizedBox(
+                  height: constraints.maxHeight * .3,
+                  child: const Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(12, 0, 12, 0),
+                    child: PostTail(),
                   ),
                 ),
               ],

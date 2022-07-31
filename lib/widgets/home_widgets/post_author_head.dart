@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:insta_clone/contants/utils.dart';
 import 'package:insta_clone/pages/profile_page.dart';
 import 'package:insta_clone/widgets/common_widgets/user_avatar.dart';
@@ -34,7 +33,7 @@ class PostAuthorHead extends StatelessWidget {
               const Spacer(),
               IconButton(
                 onPressed: () {},
-                icon: const Icon(Icons.select_all),
+                icon: const Icon(Icons.more_vert),
               ),
             ],
           ),

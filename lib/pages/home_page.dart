@@ -9,8 +9,43 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const AppScafold(
-      body: PostsListiew(),
+    return AppScafold(
+      appBarActions: [
+        const SizedBox(
+          width: 5,
+        ),
+        IconButton(
+          onPressed: (() {}),
+          icon: const Icon(
+            Icons.add_outlined,
+            size: 36,
+            color: Colors.black,
+          ),
+        ),
+        const SizedBox(
+          width: 5,
+        ),
+        IconButton(
+          onPressed: (() {}),
+          icon: const Icon(
+            Icons.favorite,
+            size: 32,
+            color: Colors.black,
+          ),
+        ),
+        const SizedBox(
+          width: 5,
+        ),
+        IconButton(
+          onPressed: (() {}),
+          icon: const Icon(
+            Icons.message,
+            size: 32,
+            color: Colors.black,
+          ),
+        ),
+      ],
+      body: const PostsListiew(),
     );
   }
 }
